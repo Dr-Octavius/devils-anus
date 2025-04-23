@@ -78,4 +78,18 @@ terraform destroy
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+1. **Fork** the repository and create a branch for your feature or bug fix.
+2. **Open a Pull Request** describing your changes and the motivation behind them.
+3. **Adhere to** any style or naming guidelines detailed in our [CONTRIBUTING.md](CONTRIBUTING.md)
+
+## Roadmap
+
+## License
+
+This repository is released under the [GNU General Purpose License V3](./LICENSE) (or whichever license you choose). See the `LICENSE` file for details.
+
+### Contact
+**Maintainers**: [sefire-octopi](mailto:origin@sefire.org)
+- **Issues**: Please open an [issue](./issues) for questions, bugs, or feature requests.
+
+Thanks for using **cosmos**! We hope it streamlines your Kubernetes provisioning and multi-cloud infrastructure management.
