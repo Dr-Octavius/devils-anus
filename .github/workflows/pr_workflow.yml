@@ -1,0 +1,172 @@
+name: Pull Request
+
+on:
+  pull_request:
+    branches: [main,release,development]
+
+jobs:
+  setup:
+    name: Set up Go
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: '^1.22'
+
+  unit-tests:
+    name: Unit Testing
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Run Unit Tests
+        run: go test ./...
+
+  integration-tests:
+    name: Integration Testing
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Run Integration Tests
+        run: go test -tags=integration ./...
+
+  system-tests:
+    name: System Testing
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Run System Tests
+        run: go test -tags=system ./...
+
+  code-coverage:
+    name: Code Coverage
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install Cover Tool
+        run: go get github.com/mattn/goveralls
+
+      - name: Run Coverage
+        run: |
+          go test -coverprofile=coverage.out ./...
+          go tool cover -func=coverage.out > coverage.txt
+
+      - name: Print Coverage Results
+        run: cat coverage.txt
+
+  code-quality:
+    name: Code Quality
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run Golangci-lint
+        uses: golangci/golangci-lint-action@v6.0.1
+
+  simulate-build:
+    name: Simulate Build
+    needs: [unit-tests, integration-tests, system-tests]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Simulate Docker Build
+        run: |
+          ln -s .docker/.dockerignore .dockerignore
+          docker build -f .docker/Dockerfile --target simulate -t temp-image .
+      - name: Remove Images
+        run: docker rmi temp-image
+
+  sast:
+    needs: [code-coverage,code-quality]
+    name: Static Application Security Testing (SAST)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Gosec Security Checker
+        uses: securego/gosec@v2.20.0
+        with:
+          args: ./...
+
+  dast:
+    needs: [simulate-build,sast]
+    name: Dynamic Application Security Testing (DAST)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
+      - name: Set up Docker
+        uses: docker/setup-buildx-action@v2
+
+      - name: Generate Certificates
+        run: |
+          # Generate CA key and certificate
+          openssl genrsa -out ca.key 2048
+          openssl req -x509 -new -nodes -key ca.key -subj "/CN=CA" -days 3650 -out ca.crt
+          
+          # Generate server key and certificate signing request (CSR)
+          openssl genrsa -out server.key 2048
+          openssl req -new -key server.key -subj "/CN=localhost" -out server.csr
+          
+          # Sign server certificate with CA
+          openssl x509 -req -in server.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out server.crt -days 3650
+          
+          # Generate client key and certificate signing request (CSR)
+          openssl genrsa -out client.key 2048
+          openssl req -new -key client.key -subj "/CN=client" -out client.csr
+          
+          # Sign client certificate with CA
+          openssl x509 -req -in client.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out client.crt -days 3650
+
+      - name: Build Docker image
+        run: |
+          ln -s .docker/.dockerignore .dockerignore
+          docker build -f .docker/Dockerfile -t temp-image .
+
+      - name: Run application container
+        run: | 
+          docker run -d -p 50051:50051 \
+            -v ${{ github.workspace }}/server.crt:/etc/server.crt \
+            -v ${{ github.workspace }}/server.key:/etc/server.key \
+            -v ${{ github.workspace }}/ca.crt:/etc/ca.crt \
+            -e SERVER_CERT_PATH=/etc/server.crt \
+            -e SERVER_KEY_PATH=/etc/server.key \
+            -e CA_CERT_PATH=/etc/ca.crt \
+            -e BIND_ADDRESS=":50051" \
+            --name temp_container temp-image
+
+      - name: Check application logs
+        run: | 
+          docker exec temp_container cat /app/logs/logs.txt
+
+      - name: Install grpcurl
+        run: |
+          curl -L https://github.com/fullstorydev/grpcurl/releases/download/v1.8.5/grpcurl_1.8.5_linux_x86_64.tar.gz -o grpcurl.tar.gz
+          tar -xvf grpcurl.tar.gz grpcurl
+          chmod +x grpcurl
+          sudo mv grpcurl /usr/local/bin/
+
+      - name: Test gRPC endpoint with grpcurl
+        run: |
+          grpcurl -d '{}' -cert client.crt -key client.key -cacert ca.crt -insecure localhost:50051 list
+
+      - name: Stop and remove application container
+        run: docker stop temp_container && docker rm temp_container
+
+      - name: Remove Docker image
+        run: docker rmi temp-image
