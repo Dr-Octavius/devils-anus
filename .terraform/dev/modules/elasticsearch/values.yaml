@@ -1,0 +1,35 @@
+# Elasticsearch Helm chart values
+
+# Replicas
+replicas: ${replicas}
+
+# Pod disruption budget
+maxUnavailable: 1
+
+# Storage
+volumeClaimTemplate:
+  accessModes: ["ReadWriteOnce"]
+  resources:
+    requests:
+      storage: ${storage_size}
+
+# Security settings
+securityContext:
+  runAsUser: 1000
+  fsGroup: 1000
+
+# Network settings
+service:
+  type: ClusterIP
+
+# Resource limits are set in the Terraform configuration
+
+# Elasticsearch configuration
+esConfig:
+  elasticsearch.yml: |
+    cluster.name: elasticsearch-cluster
+    network.host: 0.0.0.0
+    discovery.seed_hosts: ["elasticsearch-master"]
+    cluster.initial_master_nodes: ["elasticsearch-master-0", "elasticsearch-master-1", "elasticsearch-master-2"]
+    xpack.security.enabled: false
+    xpack.monitoring.collection.enabled: true
