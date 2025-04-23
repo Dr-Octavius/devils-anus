@@ -5,6 +5,8 @@
 # - modules blocks
 # - locals blocks
 #--------------------
+
+# Kubernetes cluster to reference
 data "digitalocean_kubernetes_cluster" "dev_cluster" {
   name = "sefire-sgp1-dev"
 }
@@ -14,6 +16,13 @@ resource "kubernetes_namespace" "efk" {
   metadata {
     name = var.namespace
   }
+}
+
+# Module for ECK Operator
+module "eck" {
+  source    = "./modules/eck-operator"
+  namespace = kubernetes_namespace.efk.metadata[0].name
+  # Add other variables as needed
 }
 
 # Module for Elasticsearch deployment

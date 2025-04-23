@@ -5,19 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c2143a0-7840-43aa-8984-cb71f4a3cee9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.terraform/dev/providers.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.terraform/dev/versions.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/.dockerignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/daily.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/pr_workflow.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/devils-anus.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.terraform/dev/modules/eck-operator/main.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.terraform/dev/modules/eck-operator/values.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.terraform/dev/modules/eck-operator/variables.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.terraform/dev/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/.terraform/dev/main.tf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +57,7 @@
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/looweesing/Downloads/GIT/devils-anus&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/looweesing/Downloads/GIT/devils-anus/.terraform/dev/modules/eck-operator&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -77,6 +69,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/.terraform/dev/modules/eck-operator" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -101,7 +94,7 @@
       <updated>1745390544006</updated>
       <workItem from="1745390545066" duration="370000" />
       <workItem from="1745390963141" duration="75000" />
-      <workItem from="1745391044085" duration="5035000" />
+      <workItem from="1745391044085" duration="5740000" />
     </task>
     <servers />
   </component>
