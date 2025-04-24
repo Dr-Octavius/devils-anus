@@ -5,17 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c2143a0-7840-43aa-8984-cb71f4a3cee9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.terraform/dev/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/.terraform/dev/main.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.terraform/dev/modules/eck-operator/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/.terraform/dev/modules/eck-operator/main.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.terraform/dev/modules/eck-operator/values.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.terraform/dev/modules/eck-operator/variables.tf" beforeDir="false" afterPath="$PROJECT_DIR$/.terraform/dev/modules/eck-operator/variables.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.terraform/dev/modules/elasticsearch/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/.terraform/dev/modules/elasticsearch/main.tf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.terraform/dev/modules/elasticsearch/variables.tf" beforeDir="false" afterPath="$PROJECT_DIR$/.terraform/dev/modules/elasticsearch/variables.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.terraform/dev/modules/fluentbit/variables.tf" beforeDir="false" afterPath="$PROJECT_DIR$/.terraform/dev/modules/fluentbit/variables.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.terraform/dev/outputs.tf" beforeDir="false" afterPath="$PROJECT_DIR$/.terraform/dev/outputs.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.terraform/dev/providers.tf" beforeDir="false" afterPath="$PROJECT_DIR$/.terraform/dev/providers.tf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.terraform/dev/variables.tf" beforeDir="false" afterPath="$PROJECT_DIR$/.terraform/dev/variables.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.terraform/dev/versions.tf" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +189,7 @@
       <workItem from="1745473879584" duration="301000" />
       <workItem from="1745474212289" duration="3339000" />
       <workItem from="1745477569548" duration="213000" />
-      <workItem from="1745477789678" duration="2983000" />
+      <workItem from="1745477789678" duration="5652000" />
     </task>
     <servers />
   </component>

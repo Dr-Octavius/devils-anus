@@ -11,7 +11,7 @@
 # - locals blocks only
 #----------------------
 locals {
-  namespace = "efk"
+  namespace = "efk-system"
   nodepool  = "core-np"
 }
 
@@ -52,6 +52,10 @@ module "eck" {
 module "elasticsearch" {
   source     = "./modules/elasticsearch"
   namespace  = local.namespace
+  nodepool = local.nodepool
+  resource_version = "7.17.3"
+  elasticsearch_replicas = 3
+  elasticsearch_storage_size = "30Gi"
   depends_on = [module.eck]
 }
 
