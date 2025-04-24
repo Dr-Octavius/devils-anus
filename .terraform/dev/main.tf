@@ -1,49 +1,70 @@
-#--------------------
-# Main Configuration
-# - data blocks
-# - resources blocks
-# - modules blocks
-# - locals blocks
-#--------------------
+#----------------------
+# main.tf
+# - Common Expressions
+# - Created Resources
+# - Planned Resources
+# - Referenced Configs
+#----------------------
 
-# Kubernetes cluster to reference
+#----------------------
+# Common Expressions
+# - locals blocks only
+#----------------------
+locals {
+  namespace = "efk"
+  nodepool  = "core-np"
+}
+
+#--------------------
+# Created Resources
+# - data blocks only
+#--------------------
+# Destination Cluster for EFK stack
 data "digitalocean_kubernetes_cluster" "dev_cluster" {
   name = "sefire-sgp1-dev"
 }
 
-# Create a namespace for the EFK stack
+#------------------------
+# Planned Resources
+# - resource blocks only
+#------------------------
+# Destination namespace for EFK stack
 resource "kubernetes_namespace" "efk" {
   metadata {
-    name = var.namespace
+    name = local.namespace
   }
 }
 
-# Module for ECK Operator
+#----------------------
+# Referenced Configs
+# - module blocks only
+#----------------------
+# Module Config for ECK Operator
 module "eck" {
-  source    = "./modules/eck-operator"
-  namespace = kubernetes_namespace.efk.metadata[0].name
-  # Add other variables as needed
+  source           = "./modules/eck-operator" # where to reference module
+  namespace        = local.namespace          # Set the target namespace to place pod in
+  nodepool         = local.nodepool           # Set the target nodepool to place pod in
+  name             = "eck-operator"           # Set the appropriate name
+  resource_version = "3.0.0"                  # Set the appropriate version
 }
 
 # Module for Elasticsearch deployment
 module "elasticsearch" {
-  source    = "./modules/elasticsearch"
-  namespace = kubernetes_namespace.efk.metadata[0].name
-  # Add other variables as needed
+  source     = "./modules/elasticsearch"
+  namespace  = local.namespace
+  depends_on = [module.eck]
 }
 
 # Module for Kibana deployment
 module "kibana" {
-  source    = "./modules/kibana"
-  namespace = kubernetes_namespace.efk.metadata[0].name
-  # Add other variables as needed
+  source     = "./modules/kibana"
+  namespace  = local.namespace
   depends_on = [module.elasticsearch]
 }
 
 # Module for Fluent Bit deployment
 module "fluentbit" {
-  source    = "./modules/fluentbit"
-  namespace = kubernetes_namespace.efk.metadata[0].name
-  # Add other variables as needed
+  source     = "./modules/fluentbit"
+  namespace  = local.namespace
   depends_on = [module.elasticsearch]
 }

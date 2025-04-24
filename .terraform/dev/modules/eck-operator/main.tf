@@ -1,47 +1,42 @@
-# ECK Operator module for the EFK stack
+#----------------------
+# main.tf
+# - Planned Resources
+#----------------------
 
+#------------------------
+# Planned Resources
+# - resource blocks only
+#------------------------
+# ECK Operator instance
 resource "helm_release" "eck_operator" {
-  name       = "eck-operator"
-  repository = "https://helm.elastic.co"
-  chart      = "eck-operator"
-  version          = "3.0.0"
-  namespace  = var.namespace
-  force_update = true
+  name              = var.name
+  repository        = "https://helm.elastic.co"
+  chart             = "eck-operator"
+  version           = var.resource_version
+  namespace         = var.namespace
+  force_update      = true
   dependency_update = true
-
-  #-------------------------------------------------
-  # To remove on better support for ambient/ if I
-  # find a way to make it work on ambient lol
-  #-------------------------------------------------
-  #   set {
-  #     name  = "podAnnotations.traffic\\.sidecar\\.istio\\.io/includeInboundPorts"
-  #     value = "*"
-  #   }
-  #   set {
-  #     name  = "podAnnotations.traffic\\.sidecar\\.istio\\.io/excludeInboundPorts"
-  #     value = "\"9443\""
-  #   }
 
   set {
     name  = "nodeSelector.nodepool"
-    value = "eck-np"
+    value = var.nodepool
   }
 
   set {
-    name  = "managedNamespaces"
+    name = "managedNamespaces"
     value = jsonencode({
-      (kubernetes_namespace.eck.metadata.0.name) = true
+      (var.namespace) = true
     })
   }
 
   # Add labels here
   set {
     name  = "podLabels.app"
-    value = "eck-operator"
+    value = var.name
   }
 
   set {
     name  = "podLabels.version"
-    value = "2.14.0"  # Set the appropriate version
+    value = var.resource_version
   }
 }

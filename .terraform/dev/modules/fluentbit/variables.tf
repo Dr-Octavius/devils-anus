@@ -1,4 +1,7 @@
-# Variables for the Fluent Bit module
+#------------------------
+# Variable Definitions
+# - variable blocks only
+#------------------------
 
 variable "namespace" {
   description = "Kubernetes namespace for Fluent Bit"

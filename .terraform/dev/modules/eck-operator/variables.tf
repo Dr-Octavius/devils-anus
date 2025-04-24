@@ -1,30 +1,23 @@
-# Variables for the Elasticsearch module
+#--------------
+# variables.tf
+#--------------
 
 variable "namespace" {
-  description = "Kubernetes namespace for Elasticsearch"
+  description = "Kubernetes namespace for ECK Operator"
   type        = string
 }
 
 variable "nodepool" {
-  description = "Kubernetes nodepool for the EFK stack"
+  description = "Kubernetes nodepool for ECK Operator"
   type        = string
-  default     = "core-np"
 }
 
-variable "elasticsearch_chart_version" {
-  description = "Version of the Elasticsearch Helm chart"
+variable "name" {
+  description = "Specific name for ECK Operator"
   type        = string
-  default     = "7.17.3"
 }
 
-variable "elasticsearch_replicas" {
-  description = "Number of Elasticsearch replicas"
-  type        = number
-  default     = 3
-}
-
-variable "elasticsearch_storage_size" {
-  description = "Storage size for each Elasticsearch node"
+variable "resource_version" {
+  description = "Specific version of ECK Operator"
   type        = string
-  default     = "30Gi"
 }

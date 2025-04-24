@@ -1,18 +1,13 @@
-#------------------------
-# Variable Definitions
-# - variable blocks only
-#------------------------
+#--------------
+# variables.tf
+#--------------
 
+# All secrets must be passed via variable
+# Ref: https://developer.hashicorp.com/terraform/tutorials/configuration-language/sensitive-variables
 variable "do_token" {
   description = "Digital Ocean API token"
   type        = string
   sensitive   = true
-}
-
-variable "namespace" {
-  description = "Kubernetes namespace for the EFK stack"
-  type        = string
-  default     = "efk"
 }
 
 # Ref: https://stackoverflow.com/questions/15694724/shards-and-replicas-in-elasticsearch

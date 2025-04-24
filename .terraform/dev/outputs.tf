@@ -1,8 +1,6 @@
-#----------------------
-# Output Definitions
-# - output blocks only
-#----------------------
-# Output variables for the EFK stack
+#------------
+# outputs.tf
+#------------
 
 output "elasticsearch_endpoint" {
   description = "Elasticsearch endpoint"

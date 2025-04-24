@@ -1,4 +1,7 @@
-# Variables for the Elasticsearch module
+#------------------------
+# Variable Definitions
+# - variable blocks only
+#------------------------
 
 variable "namespace" {
   description = "Kubernetes namespace for Elasticsearch"

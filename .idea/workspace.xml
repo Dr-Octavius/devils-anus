@@ -5,17 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c2143a0-7840-43aa-8984-cb71f4a3cee9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.terraform/dev/modules/eck-operator/main.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.terraform/dev/modules/eck-operator/values.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.terraform/dev/modules/eck-operator/variables.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.terraform/dev/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/.terraform/dev/main.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.terraform/dev/modules/eck-operator/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/.terraform/dev/modules/eck-operator/main.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.terraform/dev/modules/eck-operator/values.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.terraform/dev/modules/eck-operator/variables.tf" beforeDir="false" afterPath="$PROJECT_DIR$/.terraform/dev/modules/eck-operator/variables.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.terraform/dev/modules/elasticsearch/variables.tf" beforeDir="false" afterPath="$PROJECT_DIR$/.terraform/dev/modules/elasticsearch/variables.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.terraform/dev/modules/fluentbit/variables.tf" beforeDir="false" afterPath="$PROJECT_DIR$/.terraform/dev/modules/fluentbit/variables.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.terraform/dev/outputs.tf" beforeDir="false" afterPath="$PROJECT_DIR$/.terraform/dev/outputs.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.terraform/dev/providers.tf" beforeDir="false" afterPath="$PROJECT_DIR$/.terraform/dev/providers.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.terraform/dev/variables.tf" beforeDir="false" afterPath="$PROJECT_DIR$/.terraform/dev/variables.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.terraform/dev/versions.tf" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="GOROOT" url="file:///usr/local/go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -48,6 +55,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
@@ -57,12 +65,16 @@
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/looweesing/Downloads/GIT/devils-anus/.terraform/dev/modules/eck-operator&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/looweesing/Downloads/GIT/devils-anus&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/looweesing/Downloads/GIT/devils-anus/main.go&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -75,6 +87,88 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/.terraform/dev" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="devils-anus" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
+      <module name="devils-anus" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <kind value="DIRECTORY" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="devils-anus" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="devils-anus" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="devils-anus" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Python.FlaskServer">
+      <module name="devils-anus" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <module name="devils-anus" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -94,7 +188,14 @@
       <updated>1745390544006</updated>
       <workItem from="1745390545066" duration="370000" />
       <workItem from="1745390963141" duration="75000" />
-      <workItem from="1745391044085" duration="5740000" />
+      <workItem from="1745391044085" duration="5777000" />
+      <workItem from="1745473293408" duration="241000" />
+      <workItem from="1745473540484" duration="128000" />
+      <workItem from="1745473674552" duration="167000" />
+      <workItem from="1745473879584" duration="301000" />
+      <workItem from="1745474212289" duration="3339000" />
+      <workItem from="1745477569548" duration="213000" />
+      <workItem from="1745477789678" duration="2983000" />
     </task>
     <servers />
   </component>
@@ -103,5 +204,16 @@
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
