@@ -1,6 +1,6 @@
 #----------------------
 # main.tf
-# - Common Expressions
+# - Local Expressions
 # - Created Resources
 # - Planned Resources
 # - Referenced Configs
@@ -48,27 +48,8 @@ module "eck" {
   resource_version = "3.0.0"                  # Set the appropriate version
 }
 
-# Module for Elasticsearch deployment
-module "elasticsearch" {
-  source     = "./modules/elasticsearch"
-  namespace  = local.namespace
-  nodepool = local.nodepool
-  resource_version = "7.17.3"
-  elasticsearch_replicas = 3
-  elasticsearch_storage_size = "30Gi"
-  depends_on = [module.eck]
-}
-
-# Module for Kibana deployment
-module "kibana" {
-  source     = "./modules/kibana"
-  namespace  = local.namespace
-  depends_on = [module.elasticsearch]
-}
-
 # Module for Fluent Bit deployment
 module "fluentbit" {
   source     = "./modules/fluentbit"
   namespace  = local.namespace
-  depends_on = [module.elasticsearch]
 }
