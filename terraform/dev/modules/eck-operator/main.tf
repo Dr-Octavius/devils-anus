@@ -8,7 +8,7 @@
 # - resource blocks only
 #------------------------
 # ECK Operator instance
-resource "helm_release" "eck_operator" {
+resource "helm_release" "eck_stack" {
   name              = var.name
   repository        = "https://helm.elastic.co"
   chart             = "eck-operator"

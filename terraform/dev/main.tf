@@ -47,9 +47,3 @@ module "eck" {
   name             = "eck-operator"           # Set the appropriate name
   resource_version = "3.0.0"                  # Set the appropriate version
 }
-
-# Module for Fluent Bit deployment
-module "fluentbit" {
-  source     = "./modules/fluentbit"
-  namespace  = local.namespace
-}
