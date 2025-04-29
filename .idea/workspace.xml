@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c2143a0-7840-43aa-8984-cb71f4a3cee9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/terraform/dev/modules/eck-operator/providers.tf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/terraform/dev/modules/eck-operator/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/terraform/dev/modules/eck-operator/main.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/terraform/dev/modules/elasticsearch.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/terraform/dev/modules/elasticsearch.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +57,7 @@
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/LooWeeSing/Desktop/GIT/devils-anus/terraform/dev/modules",
+    "last_opened_file_path": "C:/Users/LooWeeSing/Desktop/GIT/devils-anus/terraform",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -77,11 +74,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\LooWeeSing\Desktop\GIT\devils-anus\terraform" />
       <recent name="C:\Users\LooWeeSing\Desktop\GIT\devils-anus\terraform\dev\modules" />
       <recent name="C:\Users\LooWeeSing\Desktop\GIT\devils-anus\terraform\dev\modules\eck-stack" />
       <recent name="C:\Users\LooWeeSing\Desktop\GIT\devils-anus\terraform\dev\modules\eck-operator" />
       <recent name="C:\Users\LooWeeSing\Desktop\GIT\devils-anus" />
-      <recent name="C:\Users\LooWeeSing\Desktop\GIT\devils-anus\terraform\dev\modules\fluentbit" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/.terraform/dev" />
@@ -143,7 +140,9 @@
       <workItem from="1745576711684" duration="1420000" />
       <workItem from="1745585287081" duration="942000" />
       <workItem from="1745656077706" duration="1088000" />
-      <workItem from="1745722103841" duration="1339000" />
+      <workItem from="1745722103841" duration="2131000" />
+      <workItem from="1745925139323" duration="26000" />
+      <workItem from="1745925238138" duration="1282000" />
     </task>
     <servers />
   </component>
