@@ -84,6 +84,8 @@ terraform destroy
 
 ## Roadmap
 
+1. Consider Adding ALL operators to be used in this repo (including Argo-CD)
+
 ## License
 
 This repository is released under the [GNU General Purpose License V3](./LICENSE) (or whichever license you choose). See the `LICENSE` file for details.

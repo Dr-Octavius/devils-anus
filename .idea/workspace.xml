@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c2143a0-7840-43aa-8984-cb71f4a3cee9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +57,7 @@
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/LooWeeSing/Desktop/GIT/devils-anus/terraform",
+    "last_opened_file_path": "C:/Users/LooWeeSing/Desktop/GIT/devils-anus/apps",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -74,13 +74,15 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\LooWeeSing\Desktop\GIT\devils-anus\apps" />
       <recent name="C:\Users\LooWeeSing\Desktop\GIT\devils-anus\terraform" />
       <recent name="C:\Users\LooWeeSing\Desktop\GIT\devils-anus\terraform\dev\modules" />
       <recent name="C:\Users\LooWeeSing\Desktop\GIT\devils-anus\terraform\dev\modules\eck-stack" />
       <recent name="C:\Users\LooWeeSing\Desktop\GIT\devils-anus\terraform\dev\modules\eck-operator" />
-      <recent name="C:\Users\LooWeeSing\Desktop\GIT\devils-anus" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\LooWeeSing\Desktop\GIT\devils-anus\apps\dev" />
+      <recent name="C:\Users\LooWeeSing\Desktop\GIT\devils-anus" />
       <recent name="$PROJECT_DIR$/.terraform/dev" />
     </key>
   </component>
@@ -142,7 +144,7 @@
       <workItem from="1745656077706" duration="1088000" />
       <workItem from="1745722103841" duration="2131000" />
       <workItem from="1745925139323" duration="26000" />
-      <workItem from="1745925238138" duration="1282000" />
+      <workItem from="1745925238138" duration="1431000" />
     </task>
     <servers />
   </component>
