@@ -1,0 +1,33 @@
+apiVersion: kibana.k8s.elastic.co/v1
+kind: Kibana
+metadata:
+  name: kibana
+  namespace: eck
+spec:
+  version: 9.0.0
+  count: 1
+  elasticsearchRef:
+    name: elasticsearch
+    namespace: eck
+  http:
+    tls:
+      selfSignedCertificate:
+        disabled: true
+  podTemplate:
+    metadata:
+      labels:
+        app: "kibana"
+        version: "8.15.0"
+    spec:
+      automountServiceAccountToken: true
+      containers:
+        - name: kibana
+          resources:
+            limits:
+              cpu: "1"
+              memory: "1Gi"
+            requests:
+              cpu: "0.5"
+              memory: "512Mi"
+      nodeSelector:
+        nodepool: eck-np
