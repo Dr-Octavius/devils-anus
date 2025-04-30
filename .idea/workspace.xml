@@ -5,12 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c2143a0-7840-43aa-8984-cb71f4a3cee9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/terraform/dev/modules/kubernetes/namespace/main.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/terraform/dev/modules/kubernetes/namespace/outputs.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/terraform/dev/modules/kubernetes/namespace/providers.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/terraform/dev/modules/kubernetes/namespace/variables.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/kubernetes/nodepool/main.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/kubernetes/nodepool/providers.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/kubernetes/nodepool/variables.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/terraform/dev/modules/kubernetes/nodepool/main.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/terraform/dev/modules/kubernetes/nodepool/providers.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/terraform/dev/modules/kubernetes/nodepool/variables.tf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/elasticsearch/elasticsearch.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/lib/elasticsearch/elasticsearch.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/kibana/kibana.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/lib/kibana/kibana.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/terraform/dev/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/terraform/dev/main.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/terraform/dev/modules/kubernetes/namespace/outputs.tf" beforeDir="false" afterPath="$PROJECT_DIR$/terraform/dev/modules/kubernetes/namespace/outputs.tf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,10 +93,10 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\LooWeeSing\Desktop\GIT\nullsump\terraform\dev\modules\kubernetes" />
+      <recent name="C:\Users\LooWeeSing\Desktop\GIT\nullsump\lib\kubernetes" />
+      <recent name="C:\Users\LooWeeSing\Desktop\GIT\nullsump\lib" />
       <recent name="C:\Users\LooWeeSing\Desktop\GIT\nullsump\terraform" />
       <recent name="C:\Users\LooWeeSing\Desktop\GIT\nullsump\apps" />
-      <recent name="C:\Users\LooWeeSing\Desktop\GIT\nullsump\lib" />
-      <recent name="C:\Users\LooWeeSing\Desktop\GIT\nullsump\lib\operator" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\LooWeeSing\Desktop\GIT\nullsump\terraform\dev\modules\kubernetes\namespace" />
@@ -175,7 +181,7 @@
       <workItem from="1745981102638" duration="298000" />
       <workItem from="1745981411240" duration="32000" />
       <workItem from="1745981444852" duration="300000" />
-      <workItem from="1745981760839" duration="1938000" />
+      <workItem from="1745981760839" duration="4095000" />
     </task>
     <servers />
   </component>

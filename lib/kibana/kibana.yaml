@@ -30,4 +30,4 @@ spec:
               cpu: "0.5"
               memory: "512Mi"
       nodeSelector:
-        nodepool: eck-np
+        nodepool: core-np

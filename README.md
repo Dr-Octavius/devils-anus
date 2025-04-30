@@ -85,6 +85,7 @@ terraform destroy
 ## Roadmap
 
 1. Consider Adding ALL operators to be used in this repo (including Argo-CD)
+2. To decide how to communicate resource needs that were decided in Dev Testing to be translated to SREs so that is added in staging at COSMOS
 
 ## License
 
