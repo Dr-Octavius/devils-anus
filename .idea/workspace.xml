@@ -5,12 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c2143a0-7840-43aa-8984-cb71f4a3cee9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/terraform/dev/modules/kubernetes/namespace/main.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/terraform/dev/modules/kubernetes/namespace/outputs.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/terraform/dev/modules/kubernetes/namespace/providers.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/terraform/dev/modules/kubernetes/namespace/variables.tf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/terraform/dev/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/terraform/dev/main.tf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Outputs File" />
+      </list>
+    </option>
   </component>
   <component name="GOROOT" url="file:///usr/local/go" />
   <component name="Git.Settings">
@@ -43,47 +55,49 @@
     <option name="showMembers" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/LooWeeSing/Desktop/GIT/nullsump&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/looweesing/Downloads/GIT/devils-anus/main.go&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "main",
+    "go.import.settings.migrated": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/LooWeeSing/Desktop/GIT/nullsump/terraform/dev/modules/kubernetes",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "/Users/looweesing/Downloads/GIT/devils-anus/main.go",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "show.migrate.to.gradle.popup": "false",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\LooWeeSing\Desktop\GIT\devils-anus\apps" />
-      <recent name="C:\Users\LooWeeSing\Desktop\GIT\devils-anus\terraform" />
-      <recent name="C:\Users\LooWeeSing\Desktop\GIT\devils-anus\terraform\dev\modules" />
-      <recent name="C:\Users\LooWeeSing\Desktop\GIT\devils-anus\terraform\dev\modules\eck-stack" />
-      <recent name="C:\Users\LooWeeSing\Desktop\GIT\devils-anus\terraform\dev\modules\eck-operator" />
+      <recent name="C:\Users\LooWeeSing\Desktop\GIT\nullsump\terraform\dev\modules\kubernetes" />
+      <recent name="C:\Users\LooWeeSing\Desktop\GIT\nullsump\terraform" />
+      <recent name="C:\Users\LooWeeSing\Desktop\GIT\nullsump\apps" />
+      <recent name="C:\Users\LooWeeSing\Desktop\GIT\nullsump\lib" />
+      <recent name="C:\Users\LooWeeSing\Desktop\GIT\nullsump\lib\operator" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\LooWeeSing\Desktop\GIT\nullsump\terraform\dev\modules\kubernetes\namespace" />
+      <recent name="C:\Users\LooWeeSing\Desktop\GIT\nullsump\lib\kibana" />
+      <recent name="C:\Users\LooWeeSing\Desktop\GIT\nullsump\lib\fluentd" />
+      <recent name="C:\Users\LooWeeSing\Desktop\GIT\nullsump\lib\elasticsearch" />
       <recent name="C:\Users\LooWeeSing\Desktop\GIT\devils-anus\apps\dev" />
-      <recent name="C:\Users\LooWeeSing\Desktop\GIT\devils-anus" />
-      <recent name="$PROJECT_DIR$/.terraform/dev" />
     </key>
   </component>
   <component name="RunManager">
@@ -161,7 +175,7 @@
       <workItem from="1745981102638" duration="298000" />
       <workItem from="1745981411240" duration="32000" />
       <workItem from="1745981444852" duration="300000" />
-      <workItem from="1745981760839" duration="1171000" />
+      <workItem from="1745981760839" duration="1938000" />
     </task>
     <servers />
   </component>

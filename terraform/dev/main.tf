@@ -24,21 +24,22 @@ data "digitalocean_kubernetes_cluster" "dev_cluster" {
   name = "sefire-sgp1-dev"
 }
 
-#------------------------
+#--------------------------------------------------------
 # Planned Resources
 # - resource blocks only
-#------------------------
-# Destination namespace for EFK stack
-resource "kubernetes_namespace" "efk" {
-  metadata {
-    name = local.namespace
-  }
-}
+# - place here if speed is prioritised; modularise later
+#--------------------------------------------------------
 
 #----------------------
 # Referenced Configs
 # - module blocks only
 #----------------------
+# Module Config for efk namespace
+module "efk" {
+  source           = "./modules/kubernetes/namespace" # where to reference module
+  namespace        = local.namespace          # Set the target namespace to be created
+}
+
 # Module Config for ECK Operator
 module "eck" {
   source           = "./modules/eck-operator" # where to reference module
@@ -46,4 +47,5 @@ module "eck" {
   nodepool         = local.nodepool           # Set the target nodepool to place pod in
   name             = "eck-operator"           # Set the appropriate name
   resource_version = "3.0.0"                  # Set the appropriate version
+  depends_on = [module.eck]
 }
