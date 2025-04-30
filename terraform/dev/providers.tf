@@ -8,7 +8,7 @@ terraform {
   cloud {
     organization = "sefire"
     workspaces {
-      name = "devils-anus-sgp1-dev"
+      name = "nullsump-dev"
     }
   }
   required_providers {
