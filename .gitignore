@@ -1,5 +1,8 @@
-### Terraform template
+# Local IDE directories
+.idea/
+
 # Local .terraform directories
+.terraform/
 **/.terraform/*
 
 # .tfstate files
